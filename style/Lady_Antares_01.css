@@ -1,0 +1,542 @@
+<style>
+	* { /* this rule sets the colours for the scrollbars */
+		scrollbar-color: #32174d #080808;
+	}
+
+	a:hover { /* this rule sets your cursor style for links when hovered over */
+		cursor: url('https://external-media.spacehey.net/media/snoorGLmLLRMupBYHB9rtp6Ox5GBEe_x_nj-yRIIOXZo=/https://cur.cursors-4u.net/others/oth-6/oth659.cur'), auto !important;
+	}
+	
+	* { /* this rule sets your cursor style for the whole page */
+		cursor: url('https://external-media.spacehey.net/media/sZZQjntfFmb_BaMawP6hLyu_7tguCKRJyZCZ_7FYE15A=/https://cur.cursors-4u.net/symbols/sym-2/sym188.ani'), url('https://external-media.spacehey.net/media/szBoAl9q6KCwNNEatCkrUDXbN9bKYYTutB-gdab53Sjc=/https://cur.cursors-4u.net/symbols/sym-2/sym188.png'), auto !important;
+	}
+		
+	/* this sets the style for mobile devices */
+	@media (max-width: 600px) {
+		.container {
+			width: 100% !important;
+		}
+	}
+	
+	:root { /* Colors */
+		--headers: #6c3483;
+		--text: #cf3476;
+		--names: #9b59b6;
+		--links: #2980b9;
+	}
+	
+	body { /* Main text settings */
+		font-family: 'Kode Mono', monospace;
+		font-weight: 400;
+		font-style: normal;
+	}
+	
+	.blog-preview h4,
+	.blog-preview h2,
+	.blog-preview h3,
+	.blog-preview h5 {	/* Styles for headings */
+		color: var(--headers) !important;
+	}
+
+	.profile .right .blurbs .inner .section h4 {
+		color: #9457EB;
+		font-family: 'Kumar One', system-ui;
+		text-shadow: 2px 2px 3px #4B0082;
+	}
+
+	a { /* Styles for links */
+		color: var(--links) !important;
+	}
+	
+	a:hover { /* Styles for links on hover */
+		color: #9457EB !important;
+	}
+	
+	p, .count { /* Styles for text */
+		color: var(--text);
+	}
+	
+	.profile .friends .person p { /* Styles for names and friends counter */
+		color: var(--names);
+		font-weight: 1;
+	}
+	
+	nav label { /* Styles for search */
+		color: var(--links);
+	}
+	
+	.details p:last-child { /* Styles for last login and status */
+		color: var(--text);
+	}
+	
+	.container { /* Additional styles */
+		width: 75%;
+	}
+	
+	body { /* Styles for the body */
+		position: relative;
+		background-image: url('https://external-media.spacehey.net/media/sBPZFMU8tnpl93tfakB3KvxwvDxeCNOUSfxikumvdE-g=/https://pixeljoint.com/files/icons/full/space__r1437994661.gif');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		text-align: center;
+	}
+	
+	/* Overlay to create the black transparent layer */
+	body::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.3); /* Black with 30% opacity */
+		z-index: -1;
+	}
+
+	h1 { /* Styles for the user's name */
+		color: #9457EB;
+		font-style: normal;
+		font-weight: 400;
+		font-family: 'Kumar One Outline', system-ui;
+		font-size: 40px !important;
+		text-shadow: 2px 2px 3px #4B0082;
+	}
+
+	nav{ /* the navigation is adjusted here */
+		background-color: transparent;
+		border: none;
+		text-align: center;
+	}
+
+	nav .top{ /* line that appears between help/login/signup */
+		color: #7B4A63;
+	}
+
+	nav .top, nav .links {
+		background-color: transparent;
+	}
+
+	nav .links{
+		border-top:1px solid #7B4A63;
+		border-bottom:1px solid #7B4A63;
+	}
+
+	nav .links li:not(:last-child)::after,
+	footer .links li:not(:last-child)::after{ /* this is the line that appears between links in the header and footer. you can add an emoji or symbol instead */
+		content: "✧";
+		color: #7B4A63;
+	}
+
+	a[title="Notifications"] img.icon { /* Hide the original bell icon image */
+		display: none;
+	}
+	
+	a[title="Notifications"]::before { /* Adds a new icon in the bell's stead*/
+		content: "\263D \2709 \263E"; /* Unicode of the symbols ☽ ✉ ☾ */
+	}
+	
+	a[title="Notifications"] { /* Styles for the new notification icon */
+		display: inline-block;
+		width: 50px;
+		height: 30px;
+		font-size: 24px; /* Adjust the size of the symbols */
+		text-align: center; /* Center the symbols horizontally */
+		line-height: 30px; /* Center the symbols vertically */
+		color: #000; /* Color of the symbols */
+	}
+
+	nav img.logo { /* Styles the spacehey logo itself */
+		filter: brightness(0) saturate(150%) invert(10%) sepia(74%) saturate(5025%) hue-rotate(200deg) brightness(120%) contrast(121%) !important;
+		height: 30px;
+	}
+
+	.search-wrapper input[type=text] { /* the search wrapper and button */
+		background-color: rgba(0, 0, 0, 0.5) !important;
+		border: 1px solid #007fbf!important;
+		color:#007fbf!important;
+	}
+
+	button {
+		border: 2px solid #002e63!important;
+		font-family: 'Kumar One Outline', system-ui important;
+		background-color:rgba(0, 0, 0, 0.0) !important;
+		color: #007fbf!important;
+	}
+
+	.online { /* the online symbol and text */
+		margin: auto;
+		padding-bottom: 5px;
+		content: url(https://external-media.spacehey.net/media/sv38Oz3GfJsRtyuwEp6ypugw_3zSmyeAkrWkLhPdig0U=/https://i.ibb.co/1mscxz1/blinkies-Cafe-pw.gif);
+		width: 200px;
+	}
+
+	a, p, nav label, .section { /* font family for the headers, navigtion links, links, body text */
+		font-family: var(--font-family);	
+		font-size: 12px!important;
+		font-weight: 1;
+	}
+	
+	h2, h3, h5 {
+		font-family: var(--font-family);
+		font-size: 12px!important;
+		font-weight: 1;
+	}
+
+	hr { /* the hr code. the hr is the horizontal line when you want to separate important info or add a break in your paragraphs*/
+		height:2px;
+		background: #002e63;
+		border: none!important;
+	}
+
+	.blurbs,
+	.mood,
+	.contact,
+	.profile .table,
+	.blog-preview,
+	.profile .table-section { /* this is where you adjust the borders and background */
+		border: var(--borders) !important;
+		background-color: rgba(0, 0, 0, 0.3) !important;
+	}
+	
+	.friends {
+		border: var(--borders) !important;
+		background-color: rgba(0, 0, 0, 0.0) !important;
+	}
+	
+	.comment-replies { /* this is the border around the replies */
+		border:1px solid #702963;
+	}
+
+	.comment-reply:not(:first-child) { /* line in between comment replies*/
+		border-top: 4px double #702963;
+	}
+
+	.comment-reply p {
+		margin: 0;
+		text-align: left;
+	}
+
+	td { /* your interest and comments table row background color */
+		background-color: transparent!important;
+	}
+
+	main { /* the middle section of your profile background color*/
+		background: transparent;
+		border: transparent;
+		outline: none;
+	}
+
+	.table-section { /* the interest table */
+		border:none !important;
+	}
+
+
+	.profile .contact .heading, .profile .table-section .heading,.home-actions .heading, .profile .friends .heading { /* the header section of the boxes */
+		background: rgba(0, 0, 0, 0.8); /* Black background with 80% opacity */
+		border:none !important;
+		font-family: 'Kumar One Outline', system-ui;
+		font-size: 16px !important;
+		font-weight: bold;
+		color: #9457eb;
+		text-align: center;
+		text-shadow: 1px 1px 5px #4b0082;
+		padding: 10px 25px 5px;
+		border-radius: 2px;
+		display: inline-block;
+	}
+
+	.profile-info { /* this is the box that says "Edit Info" when you're logged in, and to your friends it says "Profile Name is your friend". */
+		background: rgba(0, 0, 0, 0.8) !important;
+		border:none !important;
+		font-family: 'Kumar One Outline', system-ui;
+		text-align: center;
+		padding: 10px 25px 5px;
+		border-radius: 2px;
+		display: inline-block;
+	}
+
+	.profile-pic img { /* adjusting images borders and adding styling if you want to */
+		background: url('https://external-media.spacehey.net/media/sl2OZi8brkqCbwqLLJzVh9gzaDZ9RU0YcU_qG9BI7L-g=/https://i.pinimg.com/originals/a6/ab/7b/a6ab7b6b75c343970e20d9dc8dbd0386.gif');
+		background-size: 100%100%;
+		padding: 7px;
+		border-radius: 2px;
+		display: inline-block;
+	}
+
+	.profile-pic {
+		margin:auto;
+		padding: 10px 25px 5px;
+		border-radius: 2px;
+		display: inline-block;
+	}
+
+	friends-grid{ /* you can add text-align:center; if you want your friends to be centered */
+		text-align: center;
+	}
+
+	.profile .friends .person img:not(.icon) {
+		border-radius: 25px !important;
+		height:50px;
+		width:50px;
+		filter: grayscale(80%) blur(2px) brightness(50%) drop-shadow(0 0 5px #4b0082);
+	}
+	
+	.profile .friends .person img:not(.icon):hover {
+		filter: grayscale(0%) blur(0px) brightness(100%) drop-shadow(0 0 10px #9457eb);
+	}
+
+	.contact .inner a img { /* custom contact */
+		font-size: 0;
+	}
+	
+	.contact .inner a img:before {
+		font-size: 1em;
+		display: block;
+	}
+
+	.contact .inner .f-row:nth-child(1) .f-col:nth-child(1) a:before { /* add me */
+		content: "＋"
+	}
+	.contact .inner .f-row:nth-child(1) .f-col:nth-child(2) a:before { /* faves? */
+		content: "❥"
+	}
+	.contact .inner .f-row:nth-child(2) .f-col:nth-child(1) a:before { /* chit chat */
+		content: "➣"
+	}
+	.contact .inner .f-row:nth-child(2) .f-col:nth-child(2) a:before { /* forwardd */
+		content: "»"
+	}
+	.contact .inner .f-row:nth-child(3) .f-col:nth-child(1) a:before { /* instant chat */
+		content: "…"
+	}
+	.contact .inner .f-row:nth-child(3) .f-col:nth-child(2) a:before { /* block */
+		content: "■"
+	}
+	.contact .inner .f-row:nth-child(4) .f-col:nth-child(1) a:before { /* group me */
+		content: "☽"
+	}
+	.contact .inner .f-row:nth-child(4) .f-col:nth-child(2) a:before { /* report */
+		content: "⊗"
+	}
+
+	.comments-table { /* this is the comments table scroll code. you can delete this if you don't want a scroll box */
+		display: block;
+		height: 600px!important;
+		overflow-y: scroll;
+		border:none !important;
+		outline: none !important;
+		border-radius: 2px;
+		padding: 10px 25px 5px;
+		display: inline-block;
+		background: rgba(0, 0, 0, 0.5) !important;
+		text-align: center;
+	}
+
+	.comments-table td:first-child * {
+		color: var(--text);
+	}
+	
+	.comments-table td {
+		border: 2px solid black;
+		padding:10px;
+		border-radius: 0px;
+		filter: grayscale(80%) brightness(50%) drop-shadow(0 0 5px #4B0082);
+	}
+
+	.comments-table td:hover {
+		filter: grayscale(0%) brightness(100%) drop-shadow(0 0 5px #9457EB);
+	}
+
+	footer {
+		background: transparent;
+	}
+	footer a {
+		color: #4b0082;
+	}
+	footer p {
+		color: #9457eb;
+	}
+	
+	.blurbs .heading { /* hides the blurbs title */
+		display:none;
+	}
+
+	/* edits the links section */
+	.profile .left .table-section {
+		padding-left: 20px;
+	}
+	
+	.profile .left .table-section .inner a::before {
+		margin-right: 5px;
+		content: "Other \2726";
+		padding-top: 1px;
+		padding-right: 5px;
+		display: inline-block;
+		max-width: 130px;
+		max-height: 17px;
+		width: 100%;
+		height: 100%;
+		background-image: url("https://external-media.spacehey.net/media/s4OsjapNjDyBW1IgoNBTt_dYD26E2YDNPt7lo_3w9I_I=/https://i.ibb.co/VtKzfGY/blinkies-Cafe-uy.gif"); /* button background image */
+		background-size: 100% 100%;
+		color: lightgrey;
+		text-align: right;
+		
+	}
+
+	.profile .left .table-section .inner a:hover::before {
+		color: #9457EB;
+	}
+
+	.profile .left .table-section .inner {
+		text-align: left;
+		background-color: rgba(0, 0, 0, 0.3);
+		border-radius: 2px;
+		max-width: calc(100% - 20px);
+		min-height: 17px;
+	}
+	
+	.profile .left .table-section .inner a[href^="https://"] { /* manually add site referenced in https://spacehey.com/editlinks under 'website' behind the https:// */
+		content: ""; /* manually input your own website name between the quotes to display */
+	}
+
+	.profile .left .table-section .inner a[href^="https://www.instagram.com"]::before {
+		content: "Instagram \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://x.com"]::before {
+		content: "X \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://www.youtube."]::before {
+		content: "Youtube \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://www.youtube."] {
+		content: ""; /* manually input username between the quotes to display */
+	}
+
+	.profile .left .table-section .inner a[href^="https://www.tumblr.com"]::before {
+		content: "Tumblr \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://www.tumblr.com"] {
+		content: ""; /* manually input username between the quotes to display */
+	}
+
+	.profile .left .table-section .inner a[href^="https://www.twitch.tv"]::before {
+		content: "Twitch \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://www.facebook.com"]::before {
+		content: "Facebook \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://www.tiktok.com"]::before {
+		content: "TikTok \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://github.com"]::before {
+		content: "Github \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://www.reddit.com/u"]::before {
+		content: "Reddit \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://www.snapchat.com/add"]::before {
+		content: "Snapchat \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://dribbble.com/"]::before {
+		content: "Dribble \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://www.pinterest.com"]::before {
+		content: "Pinterest \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://open.spotify.com/user"]::before {
+		position: absolute;
+		content: "Spotify \2726";
+	}
+	.profile .left .table-section .inner a[href^="https://open.spotify.com/user"] {
+		content: ""; /* manually input username between the quotes to display */
+	}
+
+	.profile .left .table-section .inner a[href^="https://soundcloud.com"]::before {
+		content: "Soundcould \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://www.last.fm/user"]::before {
+		content: "Last.fm \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://www.deviantart.com"]::before {
+		content: "DeviantArt \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://www.behance.net"]::before {
+		content: "Behance \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://vsco.co"]::before {
+		content: "VSCO \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://ello.co"]::before {
+		content: "Ello \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://letterboxd.com"]::before {
+		content: "Letterboxd \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://BeRe.al/"]::before {
+		content: "Be Real \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://mastodon.social"]::before {
+		content: "Mastodon \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://www.threads.net"]::before {
+		content: "Threads \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://bsky.app/profile"]::before {
+		content: "Bluesky \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://linktr.ee"]::before {
+		content: "Linktree \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://producthunt.com/"]::before {
+		content: "ProductHunt \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://telegram.me"]::before {
+		content: "Telegram \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://www.patreon.com"]::before {
+		content: "Patreon \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://paypal.me"]::before {
+		content: "Paypal \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://www.buymeacoffee.com"]::before {
+		content: "Buy Me a Coffee \2726";
+	}
+
+	.profile .left .table-section .inner a[href^="https://ko-fi.com"]::before {
+		content: "Ko-fi \2726";
+	}
+
+	.url-info { /* hides url box */
+		display:none;
+	}
+</style>
