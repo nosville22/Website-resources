@@ -1,43 +1,51 @@
 <style>
    body{background-image:url(https://i.redd.it/sprnxqso2wfc1.png); //our BG img
-        background-color: #000000;  //black BG as a failsafe for BG img
-        background-repeat: repeat-y; //Setting BG to repeat vertically as Half-Life menus don't scroll down, which we undo later in code
+        background-color: #000000;  /*black BG as a failsafe for BG img
+        background-repeat: repeat-y; //Setting BG to repeat vertically as Half-Life menus don't scroll down, which we undo later in code*/
         background-size: 2560px;
-        background-attachment: fixed; //Makes the BG not scroll with the page
+        background-attachment: fixed; /*Makes the BG not scroll with the page*/
         background-position: center; }
   .top{
       border-style: outset;
-      border-color:#61645b;} //pseudo-3D border around the main body of a page to replicate the style of GoldSRC UI
+      border-color:#61645b;} /*pseudo-3D border around the main body of a page to replicate the style of GoldSRC UI*/
    main{background-color:#454d3e;
       border-style: outset;
       border-color:#61645b;
-      color:white;}  //body doesn't use root variables, like .top does, so BG color needs specifying
-   a{color:#9fa074} //links - different color
+      color:white;}  /*body doesn't use root variables, like .top does, so BG color needs specifying*/
+   a{color:#9fa074} /*links - different color*/
   ul.group-actions {background-color: #505d4b;
       border-style: outset;
       border-width: 3px;
       border-color: #71746b;}
+ .logout-btn{border: 3px outset;
+      border-color: #71746b;}
+ .logout-btn:hover {border: 3px inset;
+      border-color: #71746b;} /*the reason we do that is because the logout button and it alone inherits behaviour from button on cursor hover and only cursor hover
+but that messes with things and this is the easiest fix*/
 /*spacehey*/
-   nav .links  {text-align: center;}  //aligning the nav bar to center, to align it nicely
-   nav .links a  {color: #e4ab14;  //changing the color of links between .top and main, the way you don't have that empty space is I believe by addressing "nav  ", mind the double space - it's a class with an empty name, but I'm not sure.
-      font-size: max(0.98em, 12.7px);}  //font size 12.7 is maximum I found before notification bell pushes one of the options to new line
+   nav .links  {text-align: center;}  /*aligning the nav bar to center, to align it nicely*/
+   nav .links a  {color: #e4ab14;  /*changing the color of links between .top and main, the way you don't have that empty space is I believe by addressing "nav  ", mind the double space - it's a class with an empty name, but I'm not sure.*/
+      font-size: max(0.98em, 12.7px);}  /*font size 12.7 is maximum I found before notification bell pushes one of the options to new line*/
    nav .links li.active a {
       color: #f0dd52;
-      text-shadow: 1px 1px 10px #fd5, 1px 1px 2px #987, 1px 1px 1px #000;} //and the selected page - the last line is an amalgam of 3 text shadows/glows to make it both shiny and readable
-  .search-wrapper{border: ridge 2px #505d4b;}  //nice, simple pseudo-3D border around search to separate it from surroundings
+      text-shadow: 1px 1px 10px #fd5, 1px 1px 2px #987, 1px 1px 1px #000;} /*and the selected page - the last line is an amalgam of 3 text shadows/glows to make it both shiny and readable*/
+   nav .links a:hover {
+      color: #FFFE19;
+      text-shadow: 1px 1px 10px #fd5, 1px 1px 5px #987, 1px 1px 1px #000;}
+   .search-wrapper{border: ridge 2px #505d4b;}  /*nice, simple pseudo-3D border around search to separate it from surroundings*/
    button{background-color: #505d4b;
       border: 3px outset;}
    button:hover{background-color: #454d3e;
-      border: 3px inset;}   border: 3px inset;}   // Pushes buttons in when you hover over 'em.
+      border: 3px inset;}   border: 3px inset;}   /*Pushes buttons in when you hover over 'em.*/
   .center{margin: auto;}
-   footer{background-color:#505d4b;} //background color for footer
-   footer p{color: white;}  //regular text's color in footer
-   footer i{color: orange;}  //SpaceHey's disclaimer in the footer (affects all italics in footer)
+   footer{background-color:#505d4b;} //background color for footer*/
+   footer p{color: white;}  /*regular text's color in footer*/
+   footer i{color: orange;}  /*SpaceHey's disclaimer in the footer (affects all italics in footer)*/
 :root {--logo-blue:#505d4b;
     --darker-blue: 4C5844;
-    --lighter-blue: 505d4b;  //this change is legitimately the only reason our site navigation has n background at all - I forgot the #. Use this knowledge however you will
+    --lighter-blue: 505d4b;  /*this change is legitimately the only reason our site navigation has n background at all - I forgot the #. Use this knowledge however you will*/
     --even-lighter-blue: 958831;
     --lightest-blue: #958831}
 /*group*/
-  .col w-75 group-right .premise{color: orange;}  //this was for the group front itself, didn't have the patience to figure out the whole chain of inheritance
+  .col w-75 group-right .premise{color: orange;}  /*this was for the group front itself, didn't have the patience to figure out the whole chain of inheritance*/
 </style>
