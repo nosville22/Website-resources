@@ -1,0 +1,1 @@
+This is a double of several 88x31's from https://capstasher.neocities.org/88x31Buttons which have consistantly failed had problems loading on Spacehey from original source, at least on Firefox. And seems to be locked out from access as of the making of this README
